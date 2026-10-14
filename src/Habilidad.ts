@@ -11,4 +11,8 @@ export class Habilidad {
     getNombre(): string {
         return this.nombre;
     }
+
+    getPoder(): number {
+        return this.poder;
+    }
 }

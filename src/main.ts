@@ -83,6 +83,7 @@ document.querySelector<HTMLButtonElement>("#btn-atacar")!
 document.querySelector<HTMLButtonElement>("#btn-habilidad")!
     .addEventListener("click", () => {
         agregarRegistro(guerrero.usarHabilidad());
+        actualizarInterfaz();
     });
 
 document.querySelector<HTMLButtonElement>("#btn-danio")!

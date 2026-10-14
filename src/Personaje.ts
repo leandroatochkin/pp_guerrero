@@ -2,21 +2,37 @@ import { Arma } from "./Arma";
 import { Habilidad } from "./Habilidad";
 
 export class Personaje {
+    private readonly vidaMaxima: number;
+
     constructor(
         private nombre: string,
         private vida: number,
         private arma: Arma,
         private habilidad: Habilidad
-    ) {}
+    ) {
+        this.vidaMaxima = vida;
+    }
 
     atacar(): string {
         return `${this.nombre} ataca. ${this.arma.atacar()}`;
     }
 
     usarHabilidad(): string {
-        return `${this.nombre} utiliza una habilidad. ${this.habilidad.usar()}`;
-    }
+        const curacion = this.habilidad.getPoder();
 
+        const vidaAnterior = this.vida;
+
+        this.vida = Math.min(
+            this.vida + curacion,
+            this.vidaMaxima
+        );
+
+        const vidaRecuperada = this.vida - vidaAnterior;
+
+        return `${this.nombre} utiliza ${this.habilidad.getNombre()}.
+        ❤️ Recuperó ${vidaRecuperada} puntos de vida.
+        Vida actual: ${this.vida}/${this.vidaMaxima}`;
+    }
     cambiarArma(nuevaArma: Arma): string {
         this.arma = nuevaArma;
 
