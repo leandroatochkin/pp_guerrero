@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #111827;
+    color: #f9fafb;
+}
+
+.contenedor {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1, h2, .subtitulo {
+    text-align: center;
+}
+
+.subtitulo {
+    color: #9ca3af;
+}
+
+.tarjeta {
+    background: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 16px;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+.personaje {
+    font-size: 80px;
+    text-align: center;
+}
+
+.vida-contenedor {
+    height: 15px;
+    background: #374151;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.vida-barra {
+    height: 100%;
+    width: 100%;
+    background: #22c55e;
+    transition: width 0.3s ease;
+}
+
+.estadisticas {
+    margin: 20px 0;
+    padding: 15px;
+    background: #111827;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background: #374151;
+    color: white;
+    border: 1px solid #4b5563;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #f97316;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #ea580c;
+}
+
+#btn-cambiar {
+    width: 100%;
+}
+
+.acciones {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.acciones button {
+    flex: 1;
+}
+
+.registro {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.registro p {
+    background: #111827;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .acciones {
+        flex-direction: column;
+    }
+}

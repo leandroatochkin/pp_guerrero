@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guerrero - Agregación POO</title>
+</head>
+<body>
+
+    <main class="contenedor">
+        <h1>⚔️ Guerrero POO</h1>
+        <p class="subtitulo">Ejemplo de agregación en TypeScript</p>
+
+        <section class="tarjeta">
+            <div class="personaje">🛡️</div>
+
+            <h2>Guerrero</h2>
+
+            <p>Vida: <span id="vida">100</span> / 100</p>
+            <div class="vida-contenedor">
+                <div id="barra-vida" class="vida-barra"></div>
+            </div>
+
+            <div class="estadisticas">
+                <p>Arma: <strong id="arma-actual"></strong></p>
+                <p>Daño: <strong id="danio-arma"></strong></p>
+            </div>
+
+            <label for="selector-arma">Seleccionar arma</label>
+            <select id="selector-arma">
+                <option value="espada">Espada de fuego</option>
+                <option value="arco">Arco mágico</option>
+                <option value="hacha">Hacha de guerra</option>
+            </select>
+
+            <button id="btn-cambiar">Cambiar arma</button>
+
+            <div class="acciones">
+                <button id="btn-atacar">⚔️ Atacar</button>
+                <button id="btn-habilidad">✨ Habilidad</button>
+                <button id="btn-danio">💥 Recibir daño</button>
+            </div>
+        </section>
+
+        <section class="tarjeta">
+            <h2>Registro de acciones</h2>
+            <div id="registro" class="registro"></div>
+        </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
